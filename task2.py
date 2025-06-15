@@ -18,11 +18,11 @@ def get_numbers_ticket (min, max, quantity):
 # Введення значень користувачем
 min = int(input("Введіть мінмальне значення (більше 1): "))
 max = int(input("Введіть максимальне значення (менше 1000): "))
-quantity = int(input("Введіть кількість чисел: "))
+quantity = int(input("Введіть кількість чисел (менше різниці максимального та мінімального): "))
 
 start = time.perf_counter()
 
-if min >= 1 and max <=1000:
+if min >= 1 and max <=1000 and quantity <= (max-min):
     result = get_numbers_ticket (min, max, quantity)
     print("Ваші лотерейні числа: ", result)
 else:
